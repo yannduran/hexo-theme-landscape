@@ -1,21 +1,80 @@
-# Header
+# ---------------------------------------------------------------
+# Site Information Settings
+# ---------------------------------------------------------------
+
+# Put your favicon.ico into `hexo-site/source/` directory
+favicon: /favicon.ico
+
+# Set default keywords (use a comma to separate)
+keywords: "hexo, blog, luminous software solutions"
+
+# Set rss to false to disable feed link
+# Leave rss as empty to use site's feed link
+# Set rss to specific value if you have burned your feed already
+rss:
+
+# Specify the date when the site was setup
+since: 2017
+
+# Canonical, set a canonical link tag in your hexo, you could use it for your SEO of blog
+# See: https://support.google.com/webmasters/answer/139066
+# Tips: Before you open this tag, remeber set up your URL in hexo _config.yml ( ex. url: http://yourdomain.com )
+canonical: true
+
+# ---------------------------------------------------------------
+# Menu Settings
+# ---------------------------------------------------------------
+
+# When running the site in a subdirectory (eg domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   Home: /
-  Archives: /archives
-rss: /atom.xml
+  Website: https://luminous-software.solutions
+  Yann Duran: https://yannduran.com
+  About: /about
+  #Tags: tags
+  #Archives: archives
+  #Categories: categories
+
+navbar_brand: false #<img src="/logo.png">
 
 # Content
 excerpt_link: Read More
 fancybox: true
 
-# Sidebar
+# ---------------------------------------------------------------
+# Sidebar Settings
+# ---------------------------------------------------------------
+
+# Social Links
+# Key is the link label shown to end users
+# Value is the target link (eg GitHub: https://github.com/luminous-software)
+twitter: lumiinus
+linkedin: yannduran
+github: luminous-software
+#google_plus:
+
+# Social Links Icons
+# Icon Mapping:
+#   Map a menu item to a specific FontAwesome icon name
+#   Key is the name of the item and value is the name of FontAwsome icon (key is case-senstive)
+#   When an globe mask icon shows up that means that the item has no mapping icon
+social_icons:
+  enable: true
+  # Icon Mappings
+  # KeyMapsToSocalItemKey: NameOfTheIconFromFontAwesome
+  GitHub: github
+  Twitter: twitter
+  Linkedin: linkedin
+
+
+# Sidebar Position, available value: left | right
 sidebar: right
 widgets:
-- category
-- tag
-- tagcloud
-- archive
 - recent_posts
+- archive
+- category
+#- tag
+- tagcloud
 
 # display widgets at the bottom of index pages (pagination == 2)
 index_widgets:
@@ -25,13 +84,17 @@ index_widgets:
 
 # widget behavior
 archive_type: 'monthly'
-show_count: false
+show_count: true
 
-# Miscellaneous
-google_analytics:
-gauges_analytics:
-favicon: /favicon.png
-twitter:
-google_plus:
-fb_admins:
-fb_app_id:
+# ---------------------------------------------------------------
+# Misc Theme Settings
+# ---------------------------------------------------------------
+
+# Custom Logo.
+# !!Only available for Default Scheme currently.
+# Options:
+#   enabled: [true/false] - Replace with specific image
+#   image: url-of-image   - Images's url
+custom_logo:
+  enabled: true
+  image: logo.png

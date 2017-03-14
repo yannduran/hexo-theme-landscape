@@ -48,6 +48,7 @@
     margin: line-height 0
   h1, h2, h3, h4, h5, h6
     font-weight: bold
+	color: color-luminous
   h1, h2, h3, h4, h5, h6
     line-height: line-height-title
     margin: line-height-title 0
@@ -57,7 +58,7 @@
     &:hover
       text-decoration: underline
   ul, ol, dl
-    margin-top: line-height
+    margin-top: -line-height
     margin-bottom: line-height
   img, video
     max-width: 100%
@@ -79,7 +80,8 @@
     padding: 10px 0
   blockquote
     font-family: font-serif
-    font-size: 1.4em
+    font-style: italic;
+    font-size: 0.96em
     margin: line-height 20px
     text-align: center
     footer
@@ -120,7 +122,30 @@
       width: 100%
       height: 100%
       margin-top: 0
-
+.img-thumbnail
+  max-width: 240px
+  max-height: 96px
+  display: block
+  margin-right: 12px
+  margin-top: 12px
+  float: left
+  clear: left
+.img-code
+  max-width: 640px
+  max-height: 320px
+  display: block
+  margin-left: auto
+  margin-right: auto
+.img-topic
+  max-width: 360px
+  max-height: 1800px
+  display: block
+  margin-left 12px
+  margin-right: 12px
+  margin-top: 12px
+  margin-bottom: 12px
+  float: right
+  clear: right
 .article-more-link a
   display: inline-block
   line-height: 1em
@@ -142,7 +167,7 @@
   line-height: line-height
   border-top: 1px solid color-border
   padding-top: line-height
-  margin: 0 article-padding article-padding
+  margin: line-height article-padding article-padding
   a
     color: color-grey
     text-decoration: none

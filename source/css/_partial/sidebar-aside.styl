@@ -1,27 +1,37 @@
 #sidebar
+  background-color: color-widget-background
+  border: 1px solid color-border
+
   @media mq-normal
     column(sidebar-column)
+    width: 270px
+    line-height: 1.8em
+    margin-top: 29px + block-margin
 
-.widget-wrap
-  margin: block-margin 0
+  @media screen and (max-width: 900px)
+    float: none
+    width: 100%
 
-.widget-title
-  @extend $block-caption
+  .widget-wrap
+    //margin: block-margin 0
 
-.widget
-  color: color-sidebar-text
-  text-shadow: 0 1px #fff
-  background: color-widget-background
-  box-shadow: 0 -1px 4px color-widget-border inset
-  border: 1px solid color-widget-border
-  padding: 15px
-  border-radius: 3px
-  a
-    color: color-link
-    text-decoration: none
-    &:hover
-      text-decoration: underline
-  ul, ol, dl
+  .widget-title
+    @extend $block-caption
+    padding: 25px 20px 10px 15px
+    font-size: 1.25em
+    border-bottom: 1px solid #ddd
+    font-weight: normal
+
+  .widget
+    padding: 0px 20px
+    padding-bottom: 10px
+    word-wrap: break-word
+    a
+      color: color-link
+      text-decoration: none
+      &:hover
+        text-decoration: underline
     ul, ol, dl
-      margin-left: 15px
-      list-style: disc
+      ul, ol, dl
+        margin-left: 20px
+        list-style: disc

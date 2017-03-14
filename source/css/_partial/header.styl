@@ -14,6 +14,8 @@
   &:after
     bottom: 0
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.2))
+  #sub-nav .social
+    float: none
 
 #header-outer
   height: 100%
@@ -45,7 +47,7 @@ $logo-text
   text-decoration: none
   color: #fff
   font-weight: 300
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3)
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5)
 
 #logo
   @extend $logo-text
@@ -63,35 +65,36 @@ $logo-text
   margin-top: subtitle-size
 
 #main-nav
+//  background-color: #7E57C2
   float: left
   margin-left: -15px
 
 $nav-link
   float: left
-  color: #fff
-  opacity: 0.6
+  color: color-luminous
+  opacity: 0.8
+  font-size: subtitle-size + 3
+  font-weight: 500
   text-decoration: none
-  text-shadow: 0 1px rgba(0, 0, 0, 0.2)
+  text-shadow: 0 1px rgba(0, 0, 0, 0.5)
   transition: opacity 0.2s
   display: block
   padding: 20px 15px
   &:hover
-    opacity: 1
-
+    text-shadow: 0 1px white
 .nav-icon
   @extend $nav-link
   font-family: font-icon
   text-align: center
-  font-size: font-size
-  width: font-size
-  height: font-size
+  font-size: font-size + 5
+  width: font-size +5
+  height: font-size + 5
   padding: 20px 15px
   position: relative
   cursor: pointer
 
 .main-nav-link
   @extend $nav-link
-  font-weight: 300
   letter-spacing: 1px
   @media mq-mobile
     display: none
@@ -110,10 +113,132 @@ $nav-link
 #nav-rss-link
   &:before
     content: "\f09e"
-
+#nav-twitter-link
+  &:before
+    content: "\f099"
+#nav-linkedin-link
+  &:before
+    content: "\f0e1"
+#nav-googleplus-link
+  &:before
+    content: "\f0d5"
+#nav-github-link
+  &:before
+    content: "\f113"
 #nav-search-btn
   &:before
     content: "\f002"
+
+#sub-nav .social
+  float: left
+  margin-right: 15px
+
+@media screen and (undefined: 1040px)
+  #sub-nav .social
+    float: none
+    margin-right: 0
+
+  #sub-nav .social a:last-of-type
+    margin-right: 0
+
+#sub-nav .social a
+  -webkit-border-radius: 50%
+  border-radius: 50%
+  display: -moz-inline-stack
+  display: inline-block
+  vertical-align: middle
+  *vertical-align: auto
+  zoom: 1
+  *display: inline
+  text-indent: -9999px
+  margin: 0 15px 15px 0
+  opacity: 0.5
+  width: 28px
+  height: 28px
+  -webkit-transition: 0.3s
+  -moz-transition: 0.3s
+  -o-transition: 0.3s
+  -ms-transition: 0.3s
+  transition: 0.3s
+
+#sub-nav .social a:hover
+  opacity: 1
+  -ms-filter: none
+  filter: none
+
+#sub-nav .social a.facebook
+  background: url("/imgs/social/facebook.png") center no-repeat #3b5998
+  border: 1px solid #3b5998
+
+#sub-nav .social a.facebook:hover
+  border: 1px solid #355089
+
+#sub-nav .social a.google
+  background: url("/imgs/social/google.png") center no-repeat #c83d20
+  border: 1px solid #c83d20
+
+#sub-nav .social a.google:hover
+  border: 1px solid #b4371d
+
+#sub-nav .social a.twitter
+  background: url("/imgs/social/twitter.png") center no-repeat #55cff8
+  border: 1px solid #55cff8
+
+#sub-nav .social a.twitter:hover
+  border: 1px solid #35c6f7
+
+#sub-nav .social a.github
+  background: url("/imgs/social/github.png") center no-repeat #afb6ca
+  border: 1px solid #afb6ca
+
+#sub-nav .social a.github:hover
+  border: 1px solid #98a1bb
+
+#sub-nav .social a.coderwall
+  background: url("/imgs/social/coderwall.png") center no-repeat #3e8dcc
+  border: 1px solid #3e8dcc
+
+#sub-nav .social a.coderwall:hover
+  border: 1px solid #3280bd
+
+#sub-nav .social a.stackoverflow
+  background: url("/imgs/social/stackoverflow.png") center no-repeat #ef7522
+  border: 1px solid #ef7522
+
+#sub-nav .social a.stackoverflow:hover
+  border: 1px solid #cc7a00
+
+#sub-nav .social a.linkedin
+  background: url("/imgs/social/linkedin.png") center no-repeat #005a87
+  border: 1px solid #005a87
+
+#sub-nav .social a.pinterest
+  background: url("/imgs/social/pinterest.png") center no-repeat #be4037
+  border: 1px solid #be4037
+
+#sub-nav .social a.pinterest:hover
+  border: 1px solid #ab3a31
+
+#sub-nav .social a.delicious
+  background: url("/imgs/social/delicious.png") center no-repeat #3271cb
+  border: 1px solid #3271cb
+
+#sub-nav .social a.delicious:hover
+  border: 1px solid #2d66b7
+
+#sub-nav .social a.pinboard
+  background: url("/imgs/social/pinboard.png") center no-repeat #0066c8
+  border: 1px solid #3a729f
+
+#sub-nav .social a.pinboard:hover
+  border: 1px solid #005ce6
+
+#sub-nav .social a.rss
+  background: url("/imgs/social/rss.png") center no-repeat #ef7522
+  border: 1px solid #ef7522
+
+#sub-nav .social a.rss:hover
+  border: 1px solid #e56711
 
 #search-form-wrap
   position: absolute
